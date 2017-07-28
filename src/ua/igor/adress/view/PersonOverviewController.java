@@ -6,6 +6,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import ua.igor.adress.MainApp;
 import ua.igor.adress.model.Person;
+import ua.igor.adress.util.DateUtil;
 
 /**
  * Created by ede on 10.08.2016.
@@ -50,6 +51,11 @@ public class PersonOverviewController {
         // Initialize the person table with the two columns.
         firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+
+        showPersonDetails(null);
+
+        personTable.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValuue, newValue)->showPersonDetails(newValue));
     }
 
     /**
@@ -65,7 +71,7 @@ public class PersonOverviewController {
             streetLabel.setText(person.getStreet());
             postalCodeLabel.setText(Integer.toString(person.getPostalCode()));
             cityLabel.setText(person.getCity());
-
+            birthdayLabel.setText(DateUtil.format(person.getBirthday()));
         }
         else {
             // Person is null, remove all the text.
