@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.igor.adress.view.PersonOverviewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.igor.adress.view.PersonOverviewController">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -63,7 +63,7 @@
                     <buttons>
                       <Button minWidth="19.0" mnemonicParsing="false" prefHeight="25.0" text="New..." />
                         <Button minWidth="44.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Edit..." />
-                        <Button minWidth="51.0" mnemonicParsing="false" prefHeight="25.0" text="Delete" />
+                        <Button minWidth="51.0" mnemonicParsing="false" onAction="#handleDeletePerson" prefHeight="25.0" text="Delete" />
                     </buttons>
                   </ButtonBar>
                </children>
